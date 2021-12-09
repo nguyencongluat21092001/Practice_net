@@ -1,0 +1,46 @@
+<div class="center-x">
+  <div class="form-create">
+    <form onsubmit="createProduct()">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">ProductName</label>
+        <input type="text" [(ngModel)]='ProductName' name="FullName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Supplier</label>
+        <input type="text" [(ngModel)]='SupplierID' name="FullName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">CategoryID</label>
+        <input type="text" [(ngModel)]='CategoryID' name="FullName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">QuantityPerUnit</label>
+        <input type="text" [(ngModel)]='QuantityPerUnit' name="FullName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">UnitPrice</label>
+        <input type="text" [(ngModel)]='UnitPrice' name="FullName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">UnitslnStock</label>
+        <input type="text" [(ngModel)]='UnitslnStock' name="FullName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">UnitsOnOrder</label>
+        <input type="text" [(ngModel)]='UnitsOnOrder' name="FullName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">ReorderLevel</label>
+        <input type="text" [(ngModel)]='ReorderLevel' name="FullName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Discontinued</label>
+        <input type="text" [(ngModel)]='Discontinued' name="FullName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+
+      <button   class="btn btn-success me-3">
+        Add
+      </button>
+    </form>
+  </div>
+</div>

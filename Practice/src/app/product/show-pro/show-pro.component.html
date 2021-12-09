@@ -1,0 +1,98 @@
+<app-add-edit-stu></app-add-edit-stu>
+
+<div style="width: 60%;">
+</div>
+<div class="row">
+  <div *ngFor="let s of studentList">
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">ProductName</th>
+          <th scope="col">SupplierID</th>
+          <th scope="col">CategoryID</th>
+          <th scope="col">QuantityPerUnit</th>
+          <th scope="col">UnitPrice</th>
+          <th scope="col">UnitslnStock</th>
+          <th scope="col">UnitsOnOrder</th>
+          <th scope="col">ReorderLevel</th>
+          <th scope="col">Discontinued</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">{{s.ProductId}}</th>
+          <td>{{s.ProductName}}</td>
+          <td>{{s.SupplierID}}</td>
+          <td>{{s.CategoryID}}</td>
+          <td>{{s.QuantityPerUnit}}</td>
+          <td>{{s.UnitPrice}}</td>
+          <td>{{s.UnitslnStock}}</td>
+          <td>{{s.UnitsOnOrder}}</td>
+          <td>{{s.ReorderLevel}}</td>
+          <td>{{s.Discontinued}}</td>
+          <td><button (click)='showEdit(s)'  class="btn btn-primary">Edit</button></td>
+          <td><button type="button" class="btn btn-danger">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <div id="modelcss" class='d-none' tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Edit Trainer</h5>
+            <button (click)="closeEdit()" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+           <form >
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">ProductName</label>
+              <input type="text" [(ngModel)]='ProductName' name="FullName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">SupplierID</label>
+              <input type="text" [(ngModel)]='SupplierID' name="FullName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">CategoryID</label>
+              <input type="text" [(ngModel)]='CategoryID' name="FullName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">QuantityPerUnit</label>
+              <input type="text" [(ngModel)]='QuantityPerUnit' name="FullName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">UnitPrice</label>
+              <input type="text" [(ngModel)]='UnitPrice' name="FullName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">UnitslnStock</label>
+              <input type="text" [(ngModel)]='UnitslnStock' name="FullName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">UnitsOnOrder</label>
+              <input type="text" [(ngModel)]='UnitsOnOrder' name="FullName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">ReorderLevel</label>
+              <input type="text" [(ngModel)]='ReorderLevel' name="FullName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Discontinued</label>
+              <input type="text" [(ngModel)]='Discontinued' name="FullName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+           </form>
+          </div>
+          <div class="modal-footer">
+            <button (click)="closeEdit()" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button (click)="updateProduct()" type="button" class="btn btn-success me-3">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
