@@ -46,6 +46,7 @@ export class ShowProComponent implements OnInit {
     }
     this.sharedService.addProduct(this.product).subscribe(()=>{
       this.modalTitle = "Add Product";
+      
     })
 
     this.activateAddEditStuCom = true;
@@ -69,13 +70,14 @@ export class ShowProComponent implements OnInit {
     this.UnitsOnOrder = data.UnitsOnOrder;
     this.ReorderLevel = data.ReorderLevel;
     this.Discontinued = data.Discontinued;
+    this.ProductID=data.ProductId
     document.getElementById('modelcss')?.classList.remove('d-none')
   }
 
   updateProduct(){
     this.product = {
-      ProductID:this.ProductID,
-      ProductNameme:this.ProductName,
+      ProductId:this.ProductID,
+      ProductName:this.ProductName,
       SupplierID:this.SupplierID,
       CategoryID:this.CategoryID,
       QuantityPerUnit:this.QuantityPerUnit,
@@ -89,9 +91,17 @@ export class ShowProComponent implements OnInit {
     try {
       this.sharedService.updateProduct(this.product).subscribe((data)=>{
         alert(data)
+        window.location.reload()
       })
     } catch (error) {
       alert("Update failure")
     }
+  }
+
+  deleteProduct(id:string|number):void{
+    this.sharedService.deleteProduct(id).subscribe((data)=>{
+      alert(data)
+      window.location.reload()
+    })
   }
 }

@@ -20,7 +20,7 @@ export class SharedService {
     updateProduct(val: any) {
       return this.http.put(this.APIUrl + '/Product', val);
   }
-  deleteStudent(id: any) {
+  deleteProduct(id: any) {
     return this.http.delete(this.APIUrl + '/Product/' + id);
 }
 }

@@ -106,7 +106,7 @@ namespace Practicebe.Controllers
         [HttpDelete("{id}")]
         public JsonResult Delete(int id)
         {
-            string query = @"Delete from dbo.Product where ProductID = " + id;
+            string query = @"Delete from dbo.Product where ProductId = " + id;
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("StudentConnectionString");
             SqlDataReader myReader;

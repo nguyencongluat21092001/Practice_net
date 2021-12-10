@@ -6,15 +6,15 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductComponent } from './product/product.component';
 import { ShowProComponent } from './product/show-pro/show-pro.component';
-import { AddEditStuComponent } from './product/add-edit-stu/add-edit-stu.component';
 import { SharedService } from './shared.service';
+import { AddProductComponent } from './product/add-product/add-product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
     ShowProComponent,
-    AddEditStuComponent
+    AddProductComponent
   ],
   imports: [
     BrowserModule,

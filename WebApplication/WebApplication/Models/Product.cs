@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -7,16 +9,20 @@ namespace WebApplication.Models
 {
     public class Product
     {
-        public int ProductID { get; set; }
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int ID { get; set; }
         public string ProductName { get; set; }
-        public string SupplierID { get; set; }
-        public string CategyID { get; set; }
-        public string QuantityPerUnit { get; set; }
-        public string UnitPrice { get; set; }
-        public string UnitslnStock { get; set; }
-        public string UnitsOnOrder { get; set; }
-        public string ReorderLever { get; set; }
-        public string Discontinued { get; set; }
+        public int SupplierID { get; set; }
+        public int CategyID { get; set; }
+        public int QuantityPerUnit { get; set; }
+        public int UnitPrice { get; set; }
+        public int UnitslnStock { get; set; }
+        public int UnitsOnOrder { get; set; }
+        public int ReorderLever { get; set; }
+        public int Discontinued { get; set; }
+        [ForeignKey("CategoryID")]
+        public virtual Category Category { get; set; }
 
     }
 }
